@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>link periculos!!!</title>
+  <title>link periculos!!!!</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
@@ -23,11 +23,12 @@
     .bg-img {
       position: absolute;
       width: 260px;
-      filter: blur(1px);
       pointer-events: none;
       animation: floatMotion 8s ease-in-out infinite alternate;
       transform-origin: center;
       transition: transform 0.3s ease-out;
+      opacity: 1;
+      filter: none;
     }
 
     .bg-left-bottom { left: 60px; bottom: 60px; }
@@ -41,7 +42,6 @@
       100% { transform: rotate(-3deg) scale(1); }
     }
 
-    /* Hearts */
     .heart {
       position: absolute;
       width: 20px;
@@ -127,7 +127,11 @@
     @media (max-width: 600px) {
       .container { padding: 40px 24px; }
       h1 { font-size: 1.5rem; }
-      .bg-img { width: 160px; opacity: 1 !important; }
+      .bg-img { width: 160px; opacity: 1 !important; filter: none !important; }
+      .bg-left-bottom { bottom: 20px; }
+      .bg-right-bottom { bottom: 20px; }
+      .bg-left-top { top: 10px; }
+      .bg-right-top { top: 60px; }
       .buttons { height: 120px; }
       button { font-size: 1.05rem; padding: 12px 24px; }
       .invite { font-size: 1.2rem; }
