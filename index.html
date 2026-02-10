@@ -23,8 +23,7 @@
     .bg-img {
       position: absolute;
       width: 260px;
-      opacity: 1;
-      filter: blur(0px);
+      filter: blur(1px);
       pointer-events: none;
       animation: floatMotion 8s ease-in-out infinite alternate;
       transform-origin: center;
@@ -42,6 +41,7 @@
       100% { transform: rotate(-3deg) scale(1); }
     }
 
+    /* Hearts */
     .heart {
       position: absolute;
       width: 20px;
@@ -127,7 +127,7 @@
     @media (max-width: 600px) {
       .container { padding: 40px 24px; }
       h1 { font-size: 1.5rem; }
-      .bg-img { width: 160px; opacity: 0.18; }
+      .bg-img { width: 160px; opacity: 1 !important; }
       .buttons { height: 120px; }
       button { font-size: 1.05rem; padding: 12px 24px; }
       .invite { font-size: 1.2rem; }
@@ -198,7 +198,6 @@
       invite.style.display = "block";
       msg.style.display = "block";
       createConfetti();
-      // Exploding effect for background images
       bgImages.forEach(img => {
         img.style.transition = 'transform 0.2s ease-out';
         img.style.transform += ' scale(2)';
@@ -206,7 +205,6 @@
       });
     });
 
-    // Generate constant falling hearts
     const totalHearts = 40;
     for(let i=0;i<totalHearts;i++){
       const heart = document.createElement('div');
